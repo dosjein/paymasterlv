@@ -14,30 +14,29 @@
                   aria-hidden="true"></i>Invoices</a>
        </li>
        <ul class="nav child_menu" [hidden]="!isInvoices && !isPurchase && !isSales">
-            <li (click)="unselectAll(); isSales = true;">
+            <li [class.selected]="isSales"(click)="unselectAll(); isSales = true;">
                 <a>
                     Sales invoices
                 </a>
             </li>
-            <li (click)="unselectAll(); isPurchase = true;">
+            <li [class.selected]="isPurchase" (click)="unselectAll(); isPurchase = true;">
                 <a>
                     Purchase invoices    
                 </a>
             </li>
         </ul>
-        <li [class.active]="false"
-           [class.active-sm]="false" (click)="accountingSelected = ! accountingSelected">
+        <li (click)="accountingSelected = ! accountingSelected">
            <a>
                <i class="fa fa-tachometer"
                   aria-hidden="true"></i>Accounting</a>
        </li>
        <ul class="nav child_menu" [hidden]="!transactionsSelected && !chartsSelected && !accountingSelected">
-            <li (click)="unselectAll(); transactionsSelected = true;">
+            <li [class.selected]="transactionsSelected" (click)="unselectAll(); transactionsSelected = true;">
                 <a>
                     Transactions    
                 </a>
             </li>
-            <li (click)="unselectAll(); chartsSelected = true;">
+            <li [class.selected]="chartsSelected" (click)="unselectAll(); chartsSelected = true;">
                 <a>
                     Chart of accounts   
                 </a>
@@ -50,30 +49,30 @@
                aria-hidden="true"></i>Reports</a>
     </li>
     <ul class="nav child_menu" [hidden]="!statementsSelected && !sheetsSelected && !reportsSelected">
-         <li (click)="unselectAll(); statementsSelected = true;">
+         <li [class.selected]=""(click)="unselectAll(); statementsSelected = true;">
              <a>
                     Income statement   
              </a>
          </li>
-         <li (click)="unselectAll(); sheetsSelected = true;">
+         <li [class.selected]=""(click)="unselectAll(); sheetsSelected = true;">
              <a>
                     Balance sheet
              </a>
          </li>
      </ul>
-     <li [class.active]="false"
+     <li [class.selected]=""[class.active]="false"
      [class.active-sm]="false" (click)="companyOpen = !companyOpen">
      <a>
          <i class="fa fa-tachometer"
             aria-hidden="true"></i>Company</a>
  </li>
  <ul class="nav child_menu" [hidden]="!partnersSelected && !detailsSelected && !companyOpen">
-      <li (click)="unselectAll(); partnersSelected = true;">
+      <li [class.selected]=""(click)="unselectAll(); partnersSelected = true;">
         <a [routerLink]="['/partners',{}]">
                  Partners
           </a>
       </li>
-      <li (click)="unselectAll(); partnersSelected = true;">
+      <li [class.selected]=""(click)="unselectAll(); partnersSelected = true;">
             <a [routerLink]="['/company-settings',{}]">
                    Details
             </a>

@@ -15,7 +15,7 @@ export class NavBarComponent{
     partnersSelected:boolean = false;
     detailsSelected: boolean = false;
     companyOpen: boolean = false;
-    accountingOpen: boolean = false;
+    accountingSelected: boolean = false;
     transactionsSelected: boolean = false;
     chartsSelected: boolean = false;
     isSales: boolean = false;
@@ -32,7 +32,7 @@ export class NavBarComponent{
         this.companyOpen = false;
         this.chartsSelected = false;
         this.transactionsSelected = false;
-        this.accountingOpen = false;
+        this.accountingSelected = false;
         this.sheetsSelected = false;
         this.statementsSelected = false;
         this.reportsSelected = false;
