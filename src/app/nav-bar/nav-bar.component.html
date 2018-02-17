@@ -2,15 +2,15 @@
 <div class="menu_section">
     <div class="hardcoded-logo">
         <span>        
-            <p class="pay">PAY</p>
+            <p class="pay">PAY.</p>
             <p class="master">MASTER</p>
         </span>
     </div>
    <!--<h3>Sadaļas</h3>-->
    <ul  class="nav side-menu">
-       <li (click)="isInvoices = true; isAccounting = false; isReports= false; "
-           [class.active]="isInvoices"
-           [class.active-sm]="isInvoices">
+       <li (click)="false"
+           [class.active]="false"
+           [class.active-sm]="false">
            <a>
                <i class="fa fa-tachometer"
                   aria-hidden="true"></i>Invoices</a>
@@ -27,8 +27,8 @@
                 </a>
             </li>
         </ul>
-        <li [class.active]="isAccounting"
-           [class.active-sm]="isAccounting">
+        <li [class.active]="false"
+           [class.active-sm]="false">
            <a>
                <i class="fa fa-tachometer"
                   aria-hidden="true"></i>Accounting</a>
@@ -45,8 +45,8 @@
                 </a>
             </li>
         </ul>
-        <li [class.active]="isReports"
-        [class.active-sm]="isReports">
+        <li [class.active]="false"
+        [class.active-sm]="false">
         <a>
             <i class="fa fa-tachometer"
                aria-hidden="true"></i>Reports</a>
@@ -63,18 +63,13 @@
              </a>
          </li>
      </ul>
-     <li [class.active]="IsAccounting"
-     [class.active-sm]="IsAccounting">
+     <li [class.active]="false"
+     [class.active-sm]="false">
      <a>
          <i class="fa fa-tachometer"
             aria-hidden="true"></i>Company</a>
  </li>
  <ul class="nav child_menu">
-      <li>
-          <a>
-                 Details   
-          </a>
-      </li>
       <li>
         <a [routerLink]="['/partners',{}]">
                  Partners
@@ -82,7 +77,7 @@
       </li>
       <li>
             <a [routerLink]="['/company-settings',{}]">
-                   Settings
+                   Details
             </a>
         </li>
   </ul>
