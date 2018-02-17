@@ -9,11 +9,20 @@ export class NavBarComponent{
     isCompanySettings: boolean = false;
     isInvoices: boolean = false;
     isSettings: boolean = false;
+    reportsSelected: boolean = false;
+    statementsSelected: boolean = false;
+    sheetsSelected: boolean = false;
     partnersSelected:boolean = false;
     detailsSelected: boolean = false;
     companyOpen: boolean = false;
+    accountingOpen: boolean = false;
+    transactionsSelected: boolean = false;
+    chartsSelected: boolean = false;
+    isSales: boolean = false;
+    isPurchase: boolean = false;
 
-    unselctAll()
+
+    unselectAll()
     {
         this.isCompanySettings = false;
         this.isInvoices = false;
@@ -21,5 +30,13 @@ export class NavBarComponent{
         this.partnersSelected = false;
         this.detailsSelected = false;
         this.companyOpen = false;
+        this.chartsSelected = false;
+        this.transactionsSelected = false;
+        this.accountingOpen = false;
+        this.sheetsSelected = false;
+        this.statementsSelected = false;
+        this.reportsSelected = false;
+        this.isSales = false;
+        this.isPurchase = false;
     }
 }
