@@ -69,8 +69,8 @@
          <i class="fa fa-tachometer"
             aria-hidden="true"></i>Company</a>
  </li>
- <ul class="nav child_menu">
-      <li>
+ <ul class="nav child_menu" [hidden]="!partnersSelected && !detailsSelected && !companyOpen" (click)="companyOpen = !companyOpen">
+      <li (click)="unselectAll(); partnersSelected = true;">
         <a [routerLink]="['/partners',{}]">
                  Partners
           </a>
