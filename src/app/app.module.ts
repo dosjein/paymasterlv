@@ -12,6 +12,7 @@ import { AppRoutes } from './Routes/app.router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DxFormModule, DxButtonModule, DxDataGridModule } from 'devextreme-angular';
 import { PartnersComponent } from './partners/partners.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PartnersComponent } from './partners/partners.component';
     AppComponent,
     CompanySettingsComponent,
     DashboardComponent,
-    PartnersComponent
+    PartnersComponent,
+    NavBarComponent
   ],
   imports: [
     RouterModule.forRoot(AppRoutes),
