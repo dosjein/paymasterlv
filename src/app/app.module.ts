@@ -4,8 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
 import { ApiCallService } from './api-call.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { CompanySettingsComponent } from './company-settings/company-settings.component';
@@ -19,10 +17,6 @@ import { PartnersComponent } from './partners/partners.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    MatSidenav,
-    MatSidenavContainer,
-    MatSidenavContent,
     CompanySettingsComponent,
     DashboardComponent,
     PartnersComponent
