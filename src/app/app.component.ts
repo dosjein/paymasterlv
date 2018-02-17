@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiCallService } from './api-call.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(private http: ApiCallService) {
+    // http.authorizeUser();
+     http.checkIfAuthorized().subscribe(data=>console.log(data));
+  }
 }

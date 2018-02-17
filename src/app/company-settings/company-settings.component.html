@@ -1,0 +1,13 @@
+<div class="long-title">
+    <h3>Company details</h3>
+</div>
+<div id="form-container col-md-6 col-lg-4">
+    <dx-form id="form"
+        [colCount]="1"
+        [formData]="companySettings">
+        <dxi-item dataField="company_name"></dxi-item>
+        <dxi-item dataField="registration_number"></dxi-item>
+        <dxi-item dataField="address"></dxi-item>
+    </dx-form>
+    <dx-button (click)="updateCompanySettings()" text="Save"></dx-button>
+</div>

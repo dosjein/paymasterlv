@@ -1,0 +1,91 @@
+<div id="sidebar-menu" #sidebarMenu>
+<div class="menu_section">
+    <div class="hardcoded-logo">
+        <span>        
+            <p class="pay">PAY</p>
+            <p class="master">MASTER</p>
+        </span>
+    </div>
+   <!--<h3>Sadaļas</h3>-->
+   <ul  class="nav side-menu">
+       <li (click)="isInvoices = true; isAccounting = false; isReports= false; "
+           [class.active]="isInvoices"
+           [class.active-sm]="isInvoices">
+           <a>
+               <i class="fa fa-tachometer"
+                  aria-hidden="true"></i>Invoices</a>
+       </li>
+       <ul class="nav child_menu">
+            <li>
+                <a>
+                    Sales invoices
+                </a>
+            </li>
+            <li>
+                <a>
+                    Purchase invoices    
+                </a>
+            </li>
+        </ul>
+        <li [class.active]="isAccounting"
+           [class.active-sm]="isAccounting">
+           <a>
+               <i class="fa fa-tachometer"
+                  aria-hidden="true"></i>Accounting</a>
+       </li>
+       <ul class="nav child_menu">
+            <li>
+                <a>
+                    Transactions    
+                </a>
+            </li>
+            <li>
+                <a>
+                    Chart of accounts   
+                </a>
+            </li>
+        </ul>
+        <li [class.active]="isReports"
+        [class.active-sm]="isReports">
+        <a>
+            <i class="fa fa-tachometer"
+               aria-hidden="true"></i>Reports</a>
+    </li>
+    <ul class="nav child_menu">
+         <li>
+             <a>
+                    Income statement   
+             </a>
+         </li>
+         <li>
+             <a>
+                    Balance sheet
+             </a>
+         </li>
+     </ul>
+     <li [class.active]="IsAccounting"
+     [class.active-sm]="IsAccounting">
+     <a>
+         <i class="fa fa-tachometer"
+            aria-hidden="true"></i>Company</a>
+ </li>
+ <ul class="nav child_menu">
+      <li>
+          <a>
+                 Details   
+          </a>
+      </li>
+      <li>
+        <a [routerLink]="['/partners',{}]">
+                 Partners
+          </a>
+      </li>
+      <li>
+            <a [routerLink]="['/company-settings',{}]">
+                   Settings
+            </a>
+        </li>
+  </ul>
+   </ul>
+</div>
+</div>

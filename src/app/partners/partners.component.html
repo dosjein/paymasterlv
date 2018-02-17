@@ -1,0 +1,21 @@
+<div class="long-title">
+    <h3>Partners</h3>
+</div>
+<div id="form-container col-md-6 col-lg-4">
+        <dx-data-grid [dataSource]="partnerList"
+        (onRowInserted)="insert($event)"
+        (onRowUpdated)="update($event)"
+        (onRowRemoved)="remove($event)">
+            <dxo-editing 
+                mode="row"
+                [allowUpdating]="true"
+                [allowDeleting]="true"
+                [allowAdding]="true">
+            </dxo-editing>
+            <dxi-column dataField="partner_name" caption="Name"></dxi-column>
+            <dxi-column dataField="registration_number"></dxi-column>
+            <dxi-column dataField="email"></dxi-column>
+            <dxi-column dataField="address" [width]="130"></dxi-column> 
+            <dxi-column dataField="bank_account" [width]="130"></dxi-column>
+        </dx-data-grid>
+</div>
