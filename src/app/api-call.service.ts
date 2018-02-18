@@ -33,4 +33,8 @@ export class ApiCallService{
     removePartner(id: number){
         return this.http.get(`http://paymasterlv-backend.herokuapp.com/api/v1/delete_partner_details?partner_id=${id}`);
     }
+
+    getInvoiceList(){
+        return this.http.get(`http://paymasterlv-backend.herokuapp.com/api/v1/get_invoice_list`);
+    }
 }

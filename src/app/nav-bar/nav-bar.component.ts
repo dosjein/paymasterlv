@@ -25,17 +25,13 @@ export class NavBarComponent{
     unselectAll()
     {
         this.isCompanySettings = false;
-        this.isInvoices = false;
         this.isSettings = false;
         this.partnersSelected = false;
         this.detailsSelected = false;
-        this.companyOpen = false;
         this.chartsSelected = false;
         this.transactionsSelected = false;
-        this.accountingSelected = false;
         this.sheetsSelected = false;
         this.statementsSelected = false;
-        this.reportsSelected = false;
         this.isSales = false;
         this.isPurchase = false;
     }

@@ -29,6 +29,7 @@
     "core-js": "^2.4.1",
     "devextreme": "^17.2.5",
     "devextreme-angular": "^17.2.5",
+    "dist": "^0.1.2",
     "express": "^4.16.2",
     "font": "0.0.4",
     "rxjs": "^5.5.6",

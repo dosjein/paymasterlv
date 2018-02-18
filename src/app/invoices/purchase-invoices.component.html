@@ -1,0 +1,30 @@
+<h3>Purchases invoices</h3>
+<div id="form-container col-md-6 col-lg-4">
+    <dx-data-grid [dataSource]="invoices"
+    (onRowInserted)="insert($event)"
+    (onRowUpdated)="update($event)"
+    (onRowRemoved)="remove($event)"
+    (onRowClick)="openInvoice($event)">
+        <dxo-editing 
+            mode="row"
+            [allowUpdating]="true"
+            [allowDeleting]="true"
+            [allowAdding]="true">
+        </dxo-editing>
+        <dxi-column dataField="partner_name" caption="Vendor"></dxi-column>
+        <dxi-column dataField="invoice_nr" caption="Invoice nr."></dxi-column>
+        <dxi-column dataField="issue_date" caption="Date"></dxi-column>
+        <dxi-column dataField="deadline" caption="Dead line"></dxi-column>
+    </dx-data-grid>
+</div>
+
+<dx-popup
+        class="popup"
+        [width]="300"
+        [height]="250"
+        [showTitle]="true"
+        title="Information"
+        [dragEnabled]="false"
+        [closeOnOutsideClick]="true"
+        [(visible)]="showInvoice">
+</dx-popup>
