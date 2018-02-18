@@ -10,7 +10,7 @@ import { CompanySettingsComponent } from './company-settings/company-settings.co
 import { RouterModule } from '@angular/router';
 import { AppRoutes } from './Routes/app.router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DxFormModule, DxButtonModule, DxDataGridModule } from 'devextreme-angular';
+import { DxFormModule, DxButtonModule, DxDataGridModule, DxPopupModule } from 'devextreme-angular';
 import { PartnersComponent } from './partners/partners.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PurchaseInvoicesComponent } from './invoices/purchase-invoices.component';
@@ -32,7 +32,8 @@ import { PurchaseInvoicesComponent } from './invoices/purchase-invoices.componen
     AppRoutingModule,
     DxFormModule,
     DxButtonModule,
-    DxDataGridModule
+    DxDataGridModule,
+    DxPopupModule
   ],
   providers: [ApiCallService],
   bootstrap: [AppComponent]
